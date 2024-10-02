@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 provider "github" {
-  token = var.token
+  token = var.git-token
 }
 
 # GITHUB
