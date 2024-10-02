@@ -16,7 +16,10 @@ services:
 
   bookstore:
     # image: bookstore-api
-    build: .  # requires docker-compose up --build to work
+    build:
+      context: .
+      tags:
+        - bookstore-api:latest  # requires docker-compose up --build to work
     container_name: bookstore
     networks:
       - books-net
